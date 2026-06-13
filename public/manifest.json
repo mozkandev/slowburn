@@ -1,0 +1,10 @@
+{
+  "name": "Slowburn — small-batch candles",
+  "short_name": "Slowburn",
+  "description": "Small-batch candles, hand-poured in amber glass.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#1c1a17",
+  "icons": []
+}
