@@ -77,11 +77,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.18em] uppercase text-stone-500">
-          <span>© 2026 Slowburn Studio</span>
+          <span>© 2026 — A portfolio project by Mustafa</span>
           <div className="flex gap-6">
-            <span>Instagram</span>
-            <span>Pinterest</span>
-            <span>TikTok</span>
+            <span>Built with Next.js + Tailwind</span>
+            <span>Deployed on Vercel</span>
           </div>
         </div>
       </div>

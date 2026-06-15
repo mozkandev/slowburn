@@ -56,6 +56,40 @@ export default function AboutPage() {
           See the candles
         </Link>
       </div>
+
+      {/* ABOUT THIS PROJECT — the honest footnote. Sits at the bottom so the brand
+          story reads first; this is for the visitor who scrolls all the way down. */}
+      <div className="mt-24 border-t border-stone-200 pt-12">
+        <div className="max-w-3xl">
+          <span className="eyebrow">About this project</span>
+          <h2 className="font-serif text-3xl sm:text-4xl mt-3 leading-tight">
+            Slowburn is not a real candle company.
+          </h2>
+          <div className="mt-6 space-y-4 text-stone-700 leading-relaxed">
+            <p>
+              Slowburn is a self-directed project I designed and built end-to-end — the
+              brand, the copy, the product photography direction, the UI, and the full-stack
+              implementation. It is a UX and commerce prototype, not a real store. The cart
+              can add and remove items, but checkout is a deliberate stop sign; orders do
+              not ship, and{" "}
+              <a href="mailto:hello@slowburn.studio" className="underline decoration-stone-300 hover:text-[#8a5424] hover:decoration-[#8a5424]">
+                hello@slowburn.studio
+              </a>{" "}
+              does not exist.
+            </p>
+            <p>
+              The point of the project was to see how close a single developer could get
+              to the feel of a real small-batch brand using only typed code, a{" "}
+              <code className="text-[13px] bg-stone-100 px-1.5 py-0.5 rounded">/public</code>{" "}
+              folder of images, and a lot of attention to copy. Every product name, note,
+              and description on this site was written by hand for this project.
+            </p>
+            <p className="text-stone-500 text-sm">
+              — Mustafa
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

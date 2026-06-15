@@ -22,6 +22,14 @@ export default function HomePage() {
               Thirty small-batch scents, hand-poured in soy-coconut wax and amber glass.
               Built to last a season, designed to be remembered long after.
             </p>
+
+            {/* Subtle stack badge — signals "this was actually built" to a developer
+                scanning the page, without breaking the editorial feel. */}
+            <div className="mt-7 inline-flex items-center gap-2 text-[10px] tracking-[0.24em] uppercase text-stone-500 border border-stone-300 px-3 py-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8a5424]" />
+              Next.js 15 · TypeScript · Tailwind · Serverless API
+            </div>
+
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/shop" className="btn-primary">
                 Shop all 30
@@ -105,7 +113,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-6 text-stone-300 leading-relaxed max-w-md">
               We pour in batches of 200 or less. Every jar is wicked by hand, cured for
-              two weeks, and labeled the morning it ships. It's slow. It has to be.
+              two weeks, and labeled the morning it ships. It&apos;s slow. It has to be.
             </p>
             <Link
               href="/about"
@@ -121,6 +129,37 @@ export default function HomePage() {
             <div className="aspect-[3/4] bg-stone-700 overflow-hidden mt-8">
               <img src={PRODUCTS[5].image} alt={PRODUCTS[5].imageAlt} className="w-full h-full object-cover" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT'S BUILT — technical note for the developer reading the page.
+          Sits below "the slow method" so the brand story comes first; this is the
+          footnote that says "yes, I actually built this". */}
+      <section className="border-y border-stone-200">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-[1fr_2fr] gap-10 items-start">
+          <div>
+            <span className="eyebrow">How it&apos;s built</span>
+            <h3 className="font-serif text-2xl sm:text-3xl mt-3 leading-tight">
+              All 30 products, one file, zero CMS.
+            </h3>
+          </div>
+          <div className="text-stone-700 leading-relaxed text-[15px] space-y-4">
+            <p>
+              The catalogue lives in a single typed module —{" "}
+              <code className="text-[13px] bg-stone-100 px-1.5 py-0.5 rounded">lib/products.ts</code>{" "}
+              — and is served read-only through Next.js API routes so the same data drives
+              static pages, the shop filter, and JSON endpoints. No database, no headless
+              CMS, no third-party store. The schema is intentionally close to a Shopify
+              product payload, so swapping it for a real Storefront API is a one-file change.
+            </p>
+            <p>
+              Stack: Next.js 15 (App Router, RSC), TypeScript, Tailwind, React Context for
+              cart state with <code className="text-[13px] bg-stone-100 px-1.5 py-0.5 rounded">localStorage</code>{" "}
+              persistence, serverless functions on Vercel. Images are public JPGs at four
+              aspect ratios. The cart can add, remove, and persist — checkout is a deliberate
+              stop sign.
+            </p>
           </div>
         </div>
       </section>

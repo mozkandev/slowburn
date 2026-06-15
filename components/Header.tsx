@@ -10,9 +10,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-[#f7f3ec]/95 backdrop-blur-sm border-b border-stone-200">
-      {/* Announcement bar */}
+      {/* Announcement bar — quietly notes this is a portfolio piece */}
       <div className="bg-[#1c1a17] text-[#f7f3ec] text-[11px] tracking-[0.22em] uppercase text-center py-2.5">
-        Free shipping on orders over $60 · 30-day returns
+        A self-directed project · Brand, copy &amp; full-stack build · No real checkout
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
